@@ -29,6 +29,7 @@ class Point : UIView{
         let context = UIGraphicsGetCurrentContext();
         context?.drawRadialGradient(gradient, startCenter: start, startRadius: startRadius, endCenter: end, endRadius: endRadius, options: .drawsAfterEndLocation)
         
+        
     }
 }
 
@@ -45,6 +46,7 @@ class NestView: UIView {
     }()
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = .white
         self.randomPoints()
         
         self.layer.addSublayer(self.shaperLayer)
@@ -61,7 +63,7 @@ class NestView: UIView {
     }
     internal var points = [Point]()
     func randomPoints() {
-        for _ in 0...99 {
+        for _ in 0...100 {
             let p = Point(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
             let w = UInt32(self.frame.width)
             let h = UInt32(self.frame.height)

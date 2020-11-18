@@ -51,6 +51,7 @@
 		F141ED5F2564D9B40016D3D4 /* NestCanvasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestCanvasUITests.swift; sourceTree = "<group>"; };
 		F141ED612564D9B40016D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F141ED702564D9E90016D3D4 /* NestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestView.swift; sourceTree = "<group>"; };
+		F141ED78256522D50016D3D4 /* NestCanvas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NestCanvas.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +102,7 @@
 		F141ED3C2564D9AF0016D3D4 /* NestCanvas */ = {
 			isa = PBXGroup;
 			children = (
+				F141ED78256522D50016D3D4 /* NestCanvas.entitlements */,
 				F141ED3D2564D9AF0016D3D4 /* AppDelegate.swift */,
 				F141ED3F2564D9AF0016D3D4 /* SceneDelegate.swift */,
 				F141ED412564D9AF0016D3D4 /* ViewController.swift */,
@@ -440,7 +442,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NestCanvas/NestCanvas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCC48ZUXU8;
 				INFOPLIST_FILE = NestCanvas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +452,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -458,7 +463,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = NestCanvas/NestCanvas.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NCC48ZUXU8;
 				INFOPLIST_FILE = NestCanvas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -466,6 +473,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
