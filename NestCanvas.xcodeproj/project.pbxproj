@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F141ED3E2564D9AF0016D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED3D2564D9AF0016D3D4 /* AppDelegate.swift */; };
+		F141ED402564D9AF0016D3D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED3F2564D9AF0016D3D4 /* SceneDelegate.swift */; };
+		F141ED422564D9AF0016D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED412564D9AF0016D3D4 /* ViewController.swift */; };
+		F141ED452564D9AF0016D3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F141ED432564D9AF0016D3D4 /* Main.storyboard */; };
+		F141ED472564D9B40016D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F141ED462564D9B40016D3D4 /* Assets.xcassets */; };
+		F141ED4A2564D9B40016D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F141ED482564D9B40016D3D4 /* LaunchScreen.storyboard */; };
+		F141ED552564D9B40016D3D4 /* NestCanvasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED542564D9B40016D3D4 /* NestCanvasTests.swift */; };
+		F141ED602564D9B40016D3D4 /* NestCanvasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED5F2564D9B40016D3D4 /* NestCanvasUITests.swift */; };
+		F141ED712564D9E90016D3D4 /* NestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F141ED702564D9E90016D3D4 /* NestView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F141ED512564D9B40016D3D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F141ED322564D9AF0016D3D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F141ED392564D9AF0016D3D4;
+			remoteInfo = NestCanvas;
+		};
+		F141ED5C2564D9B40016D3D4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F141ED322564D9AF0016D3D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F141ED392564D9AF0016D3D4;
+			remoteInfo = NestCanvas;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F141ED3A2564D9AF0016D3D4 /* NestCanvas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestCanvas.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F141ED3D2564D9AF0016D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F141ED3F2564D9AF0016D3D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F141ED412564D9AF0016D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F141ED442564D9AF0016D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F141ED462564D9B40016D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F141ED492564D9B40016D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F141ED4B2564D9B40016D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F141ED502564D9B40016D3D4 /* NestCanvasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestCanvasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F141ED542564D9B40016D3D4 /* NestCanvasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestCanvasTests.swift; sourceTree = "<group>"; };
+		F141ED562564D9B40016D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F141ED5B2564D9B40016D3D4 /* NestCanvasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NestCanvasUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F141ED5F2564D9B40016D3D4 /* NestCanvasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestCanvasUITests.swift; sourceTree = "<group>"; };
+		F141ED612564D9B40016D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F141ED702564D9E90016D3D4 /* NestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NestView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F141ED372564D9AF0016D3D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED4D2564D9B40016D3D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED582564D9B40016D3D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F141ED312564D9AF0016D3D4 = {
+			isa = PBXGroup;
+			children = (
+				F141ED3C2564D9AF0016D3D4 /* NestCanvas */,
+				F141ED532564D9B40016D3D4 /* NestCanvasTests */,
+				F141ED5E2564D9B40016D3D4 /* NestCanvasUITests */,
+				F141ED3B2564D9AF0016D3D4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F141ED3B2564D9AF0016D3D4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F141ED3A2564D9AF0016D3D4 /* NestCanvas.app */,
+				F141ED502564D9B40016D3D4 /* NestCanvasTests.xctest */,
+				F141ED5B2564D9B40016D3D4 /* NestCanvasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F141ED3C2564D9AF0016D3D4 /* NestCanvas */ = {
+			isa = PBXGroup;
+			children = (
+				F141ED3D2564D9AF0016D3D4 /* AppDelegate.swift */,
+				F141ED3F2564D9AF0016D3D4 /* SceneDelegate.swift */,
+				F141ED412564D9AF0016D3D4 /* ViewController.swift */,
+				F141ED432564D9AF0016D3D4 /* Main.storyboard */,
+				F141ED462564D9B40016D3D4 /* Assets.xcassets */,
+				F141ED482564D9B40016D3D4 /* LaunchScreen.storyboard */,
+				F141ED4B2564D9B40016D3D4 /* Info.plist */,
+				F141ED702564D9E90016D3D4 /* NestView.swift */,
+			);
+			path = NestCanvas;
+			sourceTree = "<group>";
+		};
+		F141ED532564D9B40016D3D4 /* NestCanvasTests */ = {
+			isa = PBXGroup;
+			children = (
+				F141ED542564D9B40016D3D4 /* NestCanvasTests.swift */,
+				F141ED562564D9B40016D3D4 /* Info.plist */,
+			);
+			path = NestCanvasTests;
+			sourceTree = "<group>";
+		};
+		F141ED5E2564D9B40016D3D4 /* NestCanvasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F141ED5F2564D9B40016D3D4 /* NestCanvasUITests.swift */,
+				F141ED612564D9B40016D3D4 /* Info.plist */,
+			);
+			path = NestCanvasUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F141ED392564D9AF0016D3D4 /* NestCanvas */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F141ED642564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvas" */;
+			buildPhases = (
+				F141ED362564D9AF0016D3D4 /* Sources */,
+				F141ED372564D9AF0016D3D4 /* Frameworks */,
+				F141ED382564D9AF0016D3D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NestCanvas;
+			productName = NestCanvas;
+			productReference = F141ED3A2564D9AF0016D3D4 /* NestCanvas.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F141ED4F2564D9B40016D3D4 /* NestCanvasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F141ED672564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvasTests" */;
+			buildPhases = (
+				F141ED4C2564D9B40016D3D4 /* Sources */,
+				F141ED4D2564D9B40016D3D4 /* Frameworks */,
+				F141ED4E2564D9B40016D3D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F141ED522564D9B40016D3D4 /* PBXTargetDependency */,
+			);
+			name = NestCanvasTests;
+			productName = NestCanvasTests;
+			productReference = F141ED502564D9B40016D3D4 /* NestCanvasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F141ED5A2564D9B40016D3D4 /* NestCanvasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F141ED6A2564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvasUITests" */;
+			buildPhases = (
+				F141ED572564D9B40016D3D4 /* Sources */,
+				F141ED582564D9B40016D3D4 /* Frameworks */,
+				F141ED592564D9B40016D3D4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F141ED5D2564D9B40016D3D4 /* PBXTargetDependency */,
+			);
+			name = NestCanvasUITests;
+			productName = NestCanvasUITests;
+			productReference = F141ED5B2564D9B40016D3D4 /* NestCanvasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F141ED322564D9AF0016D3D4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					F141ED392564D9AF0016D3D4 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					F141ED4F2564D9B40016D3D4 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F141ED392564D9AF0016D3D4;
+					};
+					F141ED5A2564D9B40016D3D4 = {
+						CreatedOnToolsVersion = 12.2;
+						TestTargetID = F141ED392564D9AF0016D3D4;
+					};
+				};
+			};
+			buildConfigurationList = F141ED352564D9AF0016D3D4 /* Build configuration list for PBXProject "NestCanvas" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F141ED312564D9AF0016D3D4;
+			productRefGroup = F141ED3B2564D9AF0016D3D4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F141ED392564D9AF0016D3D4 /* NestCanvas */,
+				F141ED4F2564D9B40016D3D4 /* NestCanvasTests */,
+				F141ED5A2564D9B40016D3D4 /* NestCanvasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F141ED382564D9AF0016D3D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F141ED4A2564D9B40016D3D4 /* LaunchScreen.storyboard in Resources */,
+				F141ED472564D9B40016D3D4 /* Assets.xcassets in Resources */,
+				F141ED452564D9AF0016D3D4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED4E2564D9B40016D3D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED592564D9B40016D3D4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F141ED362564D9AF0016D3D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F141ED422564D9AF0016D3D4 /* ViewController.swift in Sources */,
+				F141ED3E2564D9AF0016D3D4 /* AppDelegate.swift in Sources */,
+				F141ED712564D9E90016D3D4 /* NestView.swift in Sources */,
+				F141ED402564D9AF0016D3D4 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED4C2564D9B40016D3D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F141ED552564D9B40016D3D4 /* NestCanvasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F141ED572564D9B40016D3D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F141ED602564D9B40016D3D4 /* NestCanvasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F141ED522564D9B40016D3D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F141ED392564D9AF0016D3D4 /* NestCanvas */;
+			targetProxy = F141ED512564D9B40016D3D4 /* PBXContainerItemProxy */;
+		};
+		F141ED5D2564D9B40016D3D4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F141ED392564D9AF0016D3D4 /* NestCanvas */;
+			targetProxy = F141ED5C2564D9B40016D3D4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F141ED432564D9AF0016D3D4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F141ED442564D9AF0016D3D4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F141ED482564D9B40016D3D4 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F141ED492564D9B40016D3D4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F141ED622564D9B40016D3D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F141ED632564D9B40016D3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F141ED652564D9B40016D3D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F141ED662564D9B40016D3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvas/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvas;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F141ED682564D9B40016D3D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvasTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestCanvas.app/NestCanvas";
+			};
+			name = Debug;
+		};
+		F141ED692564D9B40016D3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvasTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvasTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NestCanvas.app/NestCanvas";
+			};
+			name = Release;
+		};
+		F141ED6B2564D9B40016D3D4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NestCanvas;
+			};
+			name = Debug;
+		};
+		F141ED6C2564D9B40016D3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = NestCanvasUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = l.t.NestCanvasUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = NestCanvas;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F141ED352564D9AF0016D3D4 /* Build configuration list for PBXProject "NestCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F141ED622564D9B40016D3D4 /* Debug */,
+				F141ED632564D9B40016D3D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F141ED642564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvas" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F141ED652564D9B40016D3D4 /* Debug */,
+				F141ED662564D9B40016D3D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F141ED672564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F141ED682564D9B40016D3D4 /* Debug */,
+				F141ED692564D9B40016D3D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F141ED6A2564D9B40016D3D4 /* Build configuration list for PBXNativeTarget "NestCanvasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F141ED6B2564D9B40016D3D4 /* Debug */,
+				F141ED6C2564D9B40016D3D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F141ED322564D9AF0016D3D4 /* Project object */;
+}
