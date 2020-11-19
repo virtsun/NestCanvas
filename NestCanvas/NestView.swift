@@ -28,8 +28,6 @@ class Point : UIView{
         let endRadius = CGFloat(self.frame.size.width/2);
         let context = UIGraphicsGetCurrentContext();
         context?.drawRadialGradient(gradient, startCenter: start, startRadius: startRadius, endCenter: end, endRadius: endRadius, options: .drawsAfterEndLocation)
-        
-        
     }
 }
 
@@ -68,14 +66,18 @@ class NestView: UIView {
             let p = Point(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
             let w = UInt32(self.frame.width)
             let h = UInt32(self.frame.height)
-            let speedX = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
-            let speedY = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
 
-            p.direction = CGPoint(x: speedX * (arc4random_uniform(2) > 0 ? 1 : -1), y: speedY * (arc4random_uniform(2) > 0 ? 1 : -1))
+            p.direction = randomSpeed()
             p.center = CGPoint(x: Int(arc4random_uniform(w)), y: Int(arc4random_uniform(h)))
             self.addSubview(p)
             self.points.append(p)
         }
+    }
+    func randomSpeed() -> CGPoint {
+        let speedX = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
+        let speedY = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
+
+        return CGPoint(x: speedX * (arc4random_uniform(2) > 0 ? 1 : -1), y: speedY * (arc4random_uniform(2) > 0 ? 1 : -1))
     }
     @objc
     func move() {
@@ -84,6 +86,7 @@ class NestView: UIView {
             let y = p.center.y + p.direction.y;
             p.center = CGPoint(x: x, y: y)
             
+            ///检测碰撞，到边缘时，重新设定速度
             var collision:Bool = false
             if (p.direction.x + p.center.x < 0
                 || p.direction.x + p.center.x > self.frame.width){
@@ -93,8 +96,8 @@ class NestView: UIView {
                 || p.direction.y + p.center.y > self.frame.height){
                 collision = true
             }
-            if collision{
-                p.direction = CGPoint(x: 0.1 * (arc4random_uniform(2) > 0 ? 1 : -1), y: 0.1 * (arc4random_uniform(2) > 0 ? 1 : -1))
+            if collision {
+                p.direction = randomSpeed()
             }
         }
         linePoints()
