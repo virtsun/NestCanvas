@@ -52,6 +52,7 @@ class NestView: UIView {
         self.layer.addSublayer(self.shaperLayer)
         
         let link = CADisplayLink(target: self, selector: #selector(move))
+        link.preferredFramesPerSecond = 24
         link.add(to: .current, forMode: .default)
         
         let swipe = UIPanGestureRecognizer(target: self, action: #selector(swipe(gesture:)))
