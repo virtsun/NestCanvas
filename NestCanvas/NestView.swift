@@ -142,10 +142,15 @@ class NestView: UIView {
         let bezier = UIBezierPath()
         
         for a in self.pointGroup {
-            let b = a.first
-            bezier.move(to: b!.center)
-            for c in a {
-                bezier.addLine(to: c.center)
+            
+            guard let b = a.first,
+                  a.count > 1 else {
+                continue
+            }
+            bezier.move(to: b.center)
+            
+            for idx in 1...a.count-1{
+                bezier.addLine(to: a[idx].center)
             }
         }
         self.shaperLayer.path = bezier.cgPath
