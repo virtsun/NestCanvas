@@ -62,7 +62,7 @@ class NestView: UIView {
     }
     internal var points = [Point]()
     func randomPoints() {
-        for _ in 0...100 {
+        for _ in 0...99 {
             let p = Point(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
             let w = UInt32(self.frame.width)
             let h = UInt32(self.frame.height)
@@ -74,8 +74,8 @@ class NestView: UIView {
         }
     }
     func randomSpeed() -> CGPoint {
-        let speedX = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
-        let speedY = CGFloat(arc4random_uniform(9)+1) / CGFloat(20.0)
+        let speedX = CGFloat(arc4random_uniform(100)+1) / CGFloat(200.0)
+        let speedY = CGFloat(arc4random_uniform(100)+1) / CGFloat(200.0)
 
         return CGPoint(x: speedX * (arc4random_uniform(2) > 0 ? 1 : -1), y: speedY * (arc4random_uniform(2) > 0 ? 1 : -1))
     }
@@ -88,12 +88,12 @@ class NestView: UIView {
             
             ///检测碰撞，到边缘时，重新设定速度
             var collision:Bool = false
-            if (p.direction.x + p.center.x < 0
-                || p.direction.x + p.center.x > self.frame.width){
+            if (p.direction.x + p.frame.minX < 0
+                || p.direction.x + p.frame.maxX > self.frame.width){
                 collision = true
             }
-            if (p.direction.y + p.center.y < 0
-                || p.direction.y + p.center.y > self.frame.height){
+            if (p.direction.y + p.frame.minY < 0
+                || p.direction.y + p.frame.maxY > self.frame.height){
                 collision = true
             }
             if collision {
@@ -118,12 +118,16 @@ class NestView: UIView {
             for (idx, p) in xx.enumerated(){
                 if idx == 0 {continue}
                 
-                let x = abs(t.center.x - p.center.x);
-                let y = abs(t.center.y - p.center.y);
-                
-                if (x < 50 && y < 50 && a.count < 10){
-                    a.append(p)
+                for e in a{
+                    let x = abs(e.center.x - p.center.x);
+                    let y = abs(e.center.y - p.center.y);
+                    
+                    if (x < 50 && y < 50 && a.count < 5){
+                        a.append(p)
+                        break
+                    }
                 }
+                
             }
             for c in a.reversed(){
                 guard let i = xx.firstIndex(of: c) else {
