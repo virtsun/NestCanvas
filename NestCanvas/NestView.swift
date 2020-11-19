@@ -11,14 +11,41 @@ import UIKit
 class Point : UIView{
 
     var direction:CGPoint = .zero;
-   
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+  
+//        if arc4random_uniform(2) == 1{
+//            self.animateOpacity()
+//        }
+//        if arc4random_uniform(5) == 1{
+//            self.animateScale()
+//        }
+    }
+    func animateOpacity() {
+        let anim = CAKeyframeAnimation(keyPath: "opacity")
+        anim.duration = CFTimeInterval(arc4random_uniform(10) + 1)
+        anim.values = [0.1,0.3,0.2,0.0,0.2,0.3,0.5,0.8,1.0,0.7,0.5]
+        anim.repeatCount = MAXFLOAT
+        self.layer.add(anim, forKey: anim.keyPath)
+    }
+    func animateScale() {
+        let anim = CAKeyframeAnimation(keyPath: "transform.scale")
+        anim.duration = CFTimeInterval(arc4random_uniform(10) + 1)
+        anim.values = [0.2,0.5,1.0,2.0,1.8,1.5,1.2,1.0]
+        anim.repeatCount = MAXFLOAT
+        self.layer.add(anim, forKey: anim.keyPath)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func draw(_ rect: CGRect) {
         
         // 创建色彩空间对象
         let rgb = CGColorSpaceCreateDeviceRGB();
         
-        var cc = [[CGFloat(255), CGFloat(255),CGFloat(255), CGFloat(0.0)], [CGFloat(255), CGFloat(255), CGFloat(255), CGFloat(1)]].flatMap{$0}
-        var locations:[CGFloat] = [0, 1]           //形成梯形，渐变的效果
+        var cc = [[CGFloat(0x99), CGFloat(0x99),CGFloat(0x99), CGFloat(1)], [CGFloat(0x99), CGFloat(0x99), CGFloat(0x99), CGFloat(0)]].flatMap{$0}
+        var locations:[CGFloat] = [1, 0]           //形成梯形，渐变的效果
         guard let gradient = CGGradient(colorSpace: rgb, colorComponents: &cc, locations: &locations, count: 2) else {
             return
         }
@@ -36,7 +63,7 @@ class NestView: UIView {
         let layer = CAShapeLayer()
         
         layer.frame = self.bounds
-        layer.strokeColor = UIColor.black.withAlphaComponent(0.3).cgColor
+        layer.strokeColor = UIColor.black.withAlphaComponent(0.1).cgColor
         layer.lineWidth = 0.5;
         layer.fillColor = UIColor.clear.cgColor
         
@@ -49,7 +76,7 @@ class NestView: UIView {
         
         self.layer.addSublayer(self.shaperLayer)
         
-        let link = CADisplayLink(target: self, selector: #selector(move))
+        let link = CADisplayLink(target: self, selector: #selector(move(_:)))
         link.preferredFramesPerSecond = 24
         link.add(to: .current, forMode: .default)
         
@@ -62,7 +89,7 @@ class NestView: UIView {
     }
     internal var points = [Point]()
     func randomPoints() {
-        for _ in 0...99 {
+        for _ in 0...100 {
             let p = Point(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
             let w = UInt32(self.frame.width)
             let h = UInt32(self.frame.height)
@@ -79,8 +106,14 @@ class NestView: UIView {
 
         return CGPoint(x: speedX * (arc4random_uniform(2) > 0 ? 1 : -1), y: speedY * (arc4random_uniform(2) > 0 ? 1 : -1))
     }
+    
+    internal var timestamp : UInt64 = 0
     @objc
-    func move() {
+    func move(_ link:CADisplayLink) {
+        defer{
+            self.timestamp += 1;
+        }
+        
         for p in self.points{
             let x = p.center.x + p.direction.x;
             let y = p.center.y + p.direction.y;
@@ -100,11 +133,15 @@ class NestView: UIView {
                 p.direction = randomSpeed()
             }
         }
-        linePoints()
+        if self.timestamp % UInt64(link.preferredFramesPerSecond) == 0 {
+            linePoints()
+        }
+
         drawLines()
     }
     var pointGroup = [[UIView]]()
     func linePoints() {
+        
         var xx = self.points.map{$0}
         
         pointGroup.removeAll()
@@ -113,8 +150,7 @@ class NestView: UIView {
             guard let t = xx.first else {
                 break
             }
-            var a = [Point]()
-            a.append(t)
+            var a = [t]
             for (idx, p) in xx.enumerated(){
                 if idx == 0 {continue}
                 
